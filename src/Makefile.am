@@ -23,7 +23,9 @@ gtkperf_SOURCES = \
 	tests.c\
 	tests.h\
 	timing.c\
-	timing.h
+	timing.h\
+	duck.c\
+	duck.h
 
 gtkperf_LDFLAGS = 
 

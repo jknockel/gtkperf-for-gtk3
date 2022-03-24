@@ -57,7 +57,6 @@ packagedatadir=share
 packagedocdir=doc/${PACKAGE}
 
 dnl Set PACKAGE DIRS in config.h.
-packagepixmapsdir=${packagedatadir}/pixmaps
 packagehelpdir=${packagedatadir}/help
 packagemenudir=${packagedatadir}
 
@@ -73,12 +72,6 @@ AC_SUBST(NO_PREFIX_PACKAGE_DOC_DIR)
 PACKAGE_DOC_DIR="${packageprefix}/${packagedocdir}"
 AC_SUBST(PACKAGE_DOC_DIR)
 
-dnl Subst PACKAGE_PIXMAPS_DIR.
-NO_PREFIX_PACKAGE_PIXMAPS_DIR="${packagepixmapsdir}"
-AC_SUBST(NO_PREFIX_PACKAGE_PIXMAPS_DIR)
-PACKAGE_PIXMAPS_DIR="${packageprefix}/${packagepixmapsdir}"
-AC_SUBST(PACKAGE_PIXMAPS_DIR)
-
 dnl Subst PACKAGE_HELP_DIR.
 NO_PREFIX_PACKAGE_HELP_DIR="${packagehelpdir}"
 AC_SUBST(NO_PREFIX_PACKAGE_HELP_DIR)
@@ -93,7 +86,6 @@ AC_SUBST(PACKAGE_MENU_DIR)
 
 AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${packageprefix}/${packagedatadir}")
 AC_DEFINE_UNQUOTED(PACKAGE_DOC_DIR, "${packageprefix}/${packagedocdir}")
-AC_DEFINE_UNQUOTED(PACKAGE_PIXMAPS_DIR, "${packageprefix}/${packagepixmapsdir}")
 AC_DEFINE_UNQUOTED(PACKAGE_HELP_DIR, "${packageprefix}/${packagehelpdir}")
 AC_DEFINE_UNQUOTED(PACKAGE_MENU_DIR, "${packageprefix}/${packagemenudir}")
 AC_DEFINE_UNQUOTED(PACKAGE_SOURCE_DIR, "${packagesrcdir}")
@@ -103,7 +95,6 @@ Makefile
 intl/Makefile
 po/Makefile.in
 src/Makefile
-pixmaps/Makefile
 data/Makefile
 ])
 

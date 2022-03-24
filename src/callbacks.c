@@ -3,6 +3,7 @@
 
 #include "appdata.h"
 #include "callbacks.h"
+#include "duck.h"
 #include "interface.h"
 #include "support.h"
 #include "tests.h"
@@ -394,9 +395,9 @@ setup_widgets ()
 				   (appdata->comboboxentry_entrys), 
 				   "selection 10");
 	
-	gchar *filename = g_build_filename (PACKAGE_PIXMAPS_DIR,
-					    "duck.png", NULL);
-	appdata->pixbuf_drawing = gdk_pixbuf_new_from_file (filename, NULL);
+	GdkPixbufLoader *loader = gdk_pixbuf_loader_new ();
+	gdk_pixbuf_loader_write (loader, DUCK_PNG, sizeof(DUCK_PNG), NULL);
+	appdata->pixbuf_drawing = gdk_pixbuf_loader_get_pixbuf (loader);
 
 	gtk_combo_box_set_active (GTK_COMBO_BOX (appdata->combobox_testtype),
 				  0);
