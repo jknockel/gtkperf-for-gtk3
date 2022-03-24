@@ -162,7 +162,7 @@ on_button_start_clicked (GtkButton * button, gpointer user_data)
 
 
 void
-on_cmdline_run_all ()
+on_cmdline_run_all (void)
 {
 	gtk_notebook_set_current_page (appdata->notebook_main, 1);
 
@@ -201,7 +201,7 @@ on_cmdline_run_all ()
 
 
 void
-on_cmdline_help () {
+on_cmdline_help (void) {
 	g_print("Usage: gtkperf [OPTION]...\n");
 	g_print("GtkPerf is an application designed to test GTK+ performance.\n");
 	g_print("\n");
@@ -322,7 +322,7 @@ on_window_main_show (AppData * appdata_in)
 
 
 gboolean
-on_cleanup_and_exit()
+on_cleanup_and_exit(void)
 {
 	g_print("Quitting..\n");
 	gtk_main_quit();
@@ -418,7 +418,7 @@ setup_widgets ()
 
 /* Reset the stage of all testing widgets before starting the new test */
 void
-reset_test_widgets ()
+reset_test_widgets (void)
 {
 
 	gtk_entry_set_text (GTK_ENTRY (appdata->entry_entrys), "");
