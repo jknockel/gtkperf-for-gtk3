@@ -1,7 +1,7 @@
 Source: gtkperf
 Section: unknown
 Priority: optional
-Maintainer: Kaj Grönholm <kaj.gronholm@nomovok.com>
+Maintainer: Kaj GrÃ¶nholm <kaj.gronholm@nomovok.com>
 Build-Depends: debhelper (>= 4.0.0)
 Standards-Version: 3.6.0
 
